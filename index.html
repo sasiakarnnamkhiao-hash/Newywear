@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ta Ray - Official Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Kanit', 'sans-serif'] },
+                    colors: {
+                        taray: {
+                            bg: '#050a14', // ดำ-น้ำเงินเข้มจัด
+                            cardDark: '#0a101f', // กล่องดาร์ก
+                            text: '#f8f9fa', // ขาว
+                            textLight: '#b0c4de', // ฟ้าอ่อนขุ่น
+                            pink: '#ffb6c1', // ชมพูอ่อน (กิมมิค)
+                            gold: '#ffd700', // ทอง (กิมมิค)
+                            blueLight: '#87cefa', // ฟ้าอ่อน (กิมมิค)
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { 
+            background: linear-gradient(-45deg, #050a14, #121e31, #050a14, #121e31);
+            background-size: 400% 400%;
+            overflow-x: hidden; 
+        }
+
+        .minimal-card {
+            background: rgba(10, 16, 31, 0.85);
+            backdrop-filter: blur(8px);
+            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .minimal-card::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(135deg, var(--tw-color-text-light), var(--tw-color-text-light)/10, var(--tw-color-text-light));
+            border-radius: 22px;
+            z-index: -1;
+            filter: blur(1px);
+        }
+
+        .minimal-inner { border-radius: 15px; }
+        ::-webkit-scrollbar { width: 0px; }
+
+        /* กิมมิคสีสำหรับแต่ละกล่อง */
+        .card-pink::before { background: linear-gradient(135deg, #ffb6c1, #ffb6c1/10, #ffb6c1); }
+        .card-gold::before { background: linear-gradient(135deg, #ffd700, #ffd700/10, #ffd700); }
+        .card-blue::before { background: linear-gradient(135deg, #87cefa, #87cefa/10, #87cefa); }
+
+        /* จัดเรียงเรทราคา */
+        .rate-grid { display: grid; grid-template-cols: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+    </style>
+</head>
+<body class="antialiased font-sans flex justify-center selection:bg-blue-200 text-taray-text">
+
+    <main class="w-full max-w-[480px] min-h-screen relative z-10 bg-taray-bg/20 shadow-2xl sm:my-8 sm:rounded-[40px] overflow-hidden border border-taray-textLight/10 pb-20">
+        
+        <div class="header pt-10 pb-6 px-6 text-center minimal-card card-blue m-6">
+            <div class="relative w-full mb-6">
+                <div class="aspect-square w-24 h-24 mx-auto rounded-xl overflow-hidden border-2 border-taray-blueLight shadow-[0_0_20px_rgba(135,206,250,0.4)]">
+                    <img src="IMG_7201.jpeg" alt="Ta Ray Banner" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-2 -right-2 text-taray-blueLight">
+                    <i class="fa-solid fa-sparkles text-xl"></i>
+                </div>
+            </div>
+            <h1 class="text-3xl font-bold text-white mb-2 tracking-tighter">Ta Ray</h1>
+            <p class="text-[14px] leading-relaxed px-4 font-medium">
+                ร้าน Ta Ray รับฝากขาย รับทำป้ายฝากขาย ป้ายเรทต่างๆ ป้ายคิวอาร์ ปกเครดิต ป้ายไอดียังไม่รับทำและรับหาไอดี ✦
+            </p>
+        </div>
+
+        <div class="px-6 space-y-5 mb-10">
+            <a href="https://docs.google.com/spreadsheets/d/1-kKlNjdrTLPbQ0ogYQt7Fb-QtCoLyMmX0H57NfEOMwA/edit?usp=drivesdk" 
+               target="_blank" 
+               class="flex items-center justify-between bg-taray-cardDark text-white p-5 rounded-full shadow-[0_5px_15px_rgba(44,62,80,0.5)] hover:scale-105 transition-all minimal-card card-blue">
+                <span class="font-bold flex items-center gap-3"><i class="fa-solid fa-clock text-taray-blueLight"></i> ตรวจสอบคิว & อัปเดตสินค้า</span>
+                <i class="fa-solid fa-arrow-right text-sm"></i>
+            </a>
+        </div>
+
+        <div class="px-5 space-y-6">
+            
+            <div class="minimal-card card-pink p-2">
+                <div class="minimal-inner p-5 bg-taray-cardDark/50">
+                    <h3 class="font-bold text-taray-pink mb-4 flex items-center gap-3 text-lg">
+                        <i class="fa-solid fa-cart-shopping bg-taray-bg/70 p-2.5 rounded-full text-sm"></i> ขั้นตอนการสั่งซื้อ
+                    </h3>
+                    <ul class="text-[13.5px] space-y-3 font-medium">
+                        <li class="flex gap-2.5"><i class="fa-solid fa-caret-right text-taray-pink mt-1"></i> <span>1. ทักแชทแจ้งความต้องการ (หาไอดี / ฝากขาย / ทำป้ายเรท)</span></li>
+                        <li class="flex gap-2.5"><i class="fa-solid fa-caret-right text-taray-pink mt-1"></i> <span>2. ส่งรายละเอียดตามบรีฟ ฟอร์ม หรือรูปภาพที่ต้องใช้ทำป้าย</span></li>
+                        <li class="flex gap-2.5"><i class="fa-solid fa-caret-right text-taray-pink mt-1"></i> <span>3. ชำระเงินตามเรทราคาที่ตกลง (ชำระก่อนเริ่มงาน)</span></li>
+                        <li class="flex gap-2.5"><i class="fa-solid fa-caret-right text-taray-pink mt-1"></i> <span>4. รอรับคิวและงานตามกำหนด เช็คคิวผ่านเว็บได้เลยครับ</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="minimal-card card-gold p-2">
+                <div class="minimal-inner p-5 bg-taray-cardDark/50">
+                    <h3 class="font-bold text-taray-gold mb-4 flex items-center gap-3 text-lg">
+                        <i class="fa-solid fa-tags bg-taray-bg/70 p-2.5 rounded-full text-sm"></i> เรทราคาและบริการ
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <p class="font-bold text-[14px] mb-3 text-taray-gold">เรทราคาฝากขาย (ป้ายสีดำ-ทอง)</p>
+                            <img src="att.qinRJRdZk5uRPfzTV5LLWtC3_BvNc47dYtI2am68Mtc.jpeg" alt="เรทราคาฝากขาย" class="w-full h-auto rounded-lg shadow-md mb-4 minimal-card card-gold border-none">
+                            <div class="text-[13px] space-y-3 font-medium text-taray-textLight">
+                                <p class="font-extrabold text-taray-gold">TABAY (ร้านตาเรย์)</p>
+                                <div class="grid grid-cols-2 gap-4 border-t border-taray-gold/20 pt-3 rate-list">
+                                    <ul class="space-y-1.5 pl-4 list-disc">
+                                        <li>500 – 900 — 15 B</li>
+                                        <li>1000 – 1499 — 25 B</li>
+                                        <li>1500 – 1999 — 30 B</li>
+                                        <li>2000 – 2499 — 45 B</li>
+                                        <li>2500 – 4499 — 57 B</li>
+                                        <li>4500 – 5999 — 65 B</li>
+                                        <li>6000 – 7500 — 80 B</li>
+                                        <li>7501 – 8500 — 95 B</li>
+                                    </ul>
+                                    <ul class="space-y-1.5 pl-4 list-disc">
+                                        <li>8501 – 9999 — 145 B</li>
+                                        <li>10,000+ — 1.9%</li>
+                                        <li>14,000+ — 2.5%</li>
+                                        <li>19,000+ — 3.5%</li>
+                                        <li>30,000+ — 4.5%</li>
+                                        <li>50,000+ — 4.7%</li>
+                                        <li>70,000+ — 5%</li>
+                                        <li>100,000 — 5.5%</li>
+                                    </ul>
+                                </div>
+                                <p class="font-bold italic bg-taray-bg/30 p-2.5 rounded-xl border border-taray-gold/10 text-taray-text">หมายเหตุท้ายป้าย: คนที่เพิ่งใช้บริการจ่ายก่อนทุกกรณี</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-5 border-t border-taray-gold/20">
+                            <p class="font-bold text-[14px] mb-3 text-taray-blueLight">เรทราคาหาไอดี (ป้ายสีขาว-ดอกไม้)</p>
+                            <img src="IMG_0154.jpeg" alt="เรทราคาหาไอดี" class="w-full h-auto rounded-lg shadow-md mb-4 minimal-card card-blue border-none">
+                            <div class="text-[13px] space-y-2.5 font-medium text-taray-textLight">
+                                <p class="font-extrabold text-taray-blueLight">รับบริการหาไอดีของร้าน Ta Ray</p>
+                                <p class="font-bold text-taray-text">เรทราคาหาไอดี</p>
+                                <div class="rate-grid border-t border-taray-blueLight/20 pt-3 text-taray-text">
+                                    <p>1 – 900 = 40 B</p>
+                                    <p>901 – 1900 = 57 B</p>
+                                    <p>1901 – 3500 = 75 B</p>
+                                    <p>3501 – 6000 = 90 B</p>
+                                    <p>6001 – 9000 = 120 B</p>
+                                    <p>9001 – 9,999 = 145 B</p>
+                                    <p>10,000+++ = 170 B</p>
+                                    <p>15,000+++ = 200 B</p>
+                                    <p>30,000+++ = 250 B</p>
+                                    <p>50,000+++ = 275 B</p>
+                                    <p>100,000+++ = 300 B</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="minimal-card card-blue p-2">
+                <div class="minimal-inner p-5 bg-taray-cardDark/50">
+                    <h3 class="font-bold text-taray-blueLight mb-4 flex items-center gap-3 text-lg">
+                        <i class="fa-solid fa-file-contract bg-taray-bg/70 p-2.5 rounded-full text-sm"></i> รายละเอียดเช็คคิวและฝากขาย
+                    </h3>
+                    <div class="space-y-4 text-[13.5px] font-medium text-taray-textLight">
+                        <p class="font-extrabold text-taray-blueLight">วิธีการฝากขายทางร้าน Ta Ray</p>
+                        <p class="text-taray-text">ต้องเตรียมรูปดังนี้:</p>
+                        <ul class="pl-4 list-disc space-y-1.5 text-taray-text">
+                            <li>สกิน เครื่องประดับ สัตว์เลี้ยง ของในคลัง ยอดเติม แรงค์</li>
+                            <li>และจะมีแบบฟอร์มให้กรอก</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="minimal-card card-gold p-2">
+                <div class="minimal-inner p-5 bg-taray-cardDark/50">
+                    <h3 class="font-bold text-taray-gold mb-4 flex items-center gap-3 text-lg">
+                        <i class="fa-solid fa-circle-question bg-taray-bg/70 p-2.5 rounded-full text-sm"></i> คำถามที่พบบ่อย
+                    </h3>
+                    <div class="text-[13.5px] space-y-4 font-medium text-taray-textLight">
+                        <div class="bg-taray-bg/30 p-3 rounded-xl border border-taray-gold/10 shadow-sm">
+                            <p class="font-bold text-taray-gold">Q: รับงานด่วนไหมครับ?</p>
+                            <p>A: สามารถทักมาสอบถามคิวงานก่อนได้ครับ หากคิวไม่เยอะทางร้านยินดีลัดคิวให้ฟรี</p>
+                        </div>
+                        <div class="bg-taray-bg/30 p-3 rounded-xl border border-taray-gold/10 shadow-sm">
+                            <p class="font-bold text-taray-gold">Q: มีประกันหลังการขายไหม?</p>
+                            <p>A: หากงานเกิดข้อผิดพลาดจากทางร้าน (สะกดผิด/ข้อมูลตกหล่น) แก้ไขให้ฟรีทันทีครับ</p>
+                        </div>
+                        <div class="bg-taray-bg/30 p-3 rounded-xl border border-taray-gold/10 shadow-sm">
+                            <p class="font-bold text-taray-gold">Q: สามารถยกเลิกงานและขอคืนเงินได้ไหม?</p>
+                            <p>A: หากทางร้านเริ่มดำเนินการไปแล้ว จะไม่สามารถขอคืนเงินได้ในทุกกรณีครับ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="pt-6">
+                <h3 class="text-center font-bold text-taray-blueLight mb-4 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-comments text-taray-blueLight"></i> ช่องทางติดต่อ
+                </h3>
+                <div class="px-2">
+                    <a href="https://www.facebook.com/share/1HXq3wncat/?mibextid=wwXIfr" target="_blank" class="minimal-card card-blue p-4 flex items-center gap-4 hover:scale-[1.05] transition-all minimal-inner">
+                        <div class="w-14 h-14 bg-blue-600 rounded-[15px] flex items-center justify-center text-white text-3xl">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-[15px] text-taray-text">Ta Ray (มะเหมี่ยว บลูอาย)</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square ml-auto text-gray-400 text-sm"></i>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="mt-16 text-center px-10 pb-8 border-t border-taray-blueLight/10 pt-8">
+            <p class="text-taray-blueLight/50 text-[12px] font-bold">
+                ขอบคุณที่ไว้วางใจร้าน Ta Ray นะครับ 💙✨
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
